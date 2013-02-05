@@ -1,0 +1,24 @@
+<plugin name='grails-fortnox' version='0.1' grailsVersion='2.1 &gt; *'>
+  <author>Carljohan Carlsson</author>
+  <authorEmail>calle@matchi.se</authorEmail>
+  <title>Grails Fortnox Plugin</title>
+  <description>Grails plugin for integrating with Fortnox (www.fortnox.se) API.
+</description>
+  <documentation>http://grails.org/plugin/grails-fortnox</documentation>
+  <type>GrailsFortnoxGrailsPlugin</type>
+  <resources>
+    <resource>com.matchi.fortnox.services.ContactService</resource>
+    <resource>com.matchi.fortnox.services.FortnoxService</resource>
+    <resource>com.matchi.fortnox.services.InvoiceService</resource>
+    <resource>com.matchi.fortnox.services.ItemService</resource>
+  </resources>
+  <repositories>
+    <repository name='grailsCentral' url='http://grails.org/plugins' />
+    <repository name='http://repo.grails.org/grails/core' url='http://repo.grails.org/grails/core/' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+  </repositories>
+  <dependencies />
+  <plugins />
+  <runtimePluginRequirements />
+  <behavior />
+</plugin>
