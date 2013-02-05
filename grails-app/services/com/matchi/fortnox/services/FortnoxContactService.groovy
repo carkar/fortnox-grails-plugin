@@ -5,7 +5,7 @@ import groovyx.net.http.ContentType
 import groovyx.net.http.HTTPBuilder
 import groovyx.net.http.Method
 
-class ContactService {
+class FortnoxContactService {
 
     private static final String GET_CUSTOMER_REGISTER = "get_customerregister.php"
     private static final String GET_CONTACT           = "get_contact.php"

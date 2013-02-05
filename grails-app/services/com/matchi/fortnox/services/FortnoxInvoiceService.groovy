@@ -2,7 +2,7 @@ package com.matchi.fortnox.services
 
 import com.matchi.fortnox.domain.Invoice
 
-class InvoiceService {
+class FortnoxInvoiceService {
 
     private static final String SET_INVOICE         = "set_invoice.php"
     private static final String SET_INVOICE_CANCEL  = "set_invoice_cancel.php"

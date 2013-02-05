@@ -19,33 +19,28 @@ class FortnoxGrailsPlugin {
         "grails-app/views/error.gsp"
     ]
 
-    // TODO Fill in these fields
-    def title = "Grails Fortnox Plugin" // Headline display name of the plugin
+    def title = "Fortnox" // Headline display name of the plugin
     def author = "Carljohan Carlsson"
-    def authorEmail = "calle@matchi.se"
-    def description = '''\
-Grails plugin for integrating with Fortnox (www.fortnox.se) API.
-'''
+    def authorEmail = "carljohan.carlsson@gmail.com"
+    def description = 'Grails plugin for integrating with Fortnox (www.fortnox.se) API'
 
     // URL to the plugin's documentation
-    def documentation = "http://grails.org/plugin/grails-fortnox"
-
-    // Extra (optional) plugin metadata
+    def documentation = "https://github.com/carkar/fortnox-grails-plugin"
 
     // License: one of 'APACHE', 'GPL2', 'GPL3'
-//    def license = "APACHE"
+    def license = "APACHE"
 
     // Details of company behind the plugin (if there is one)
-//    def organization = [ name: "My Company", url: "http://www.my-company.com/" ]
+    def organization = [ name: "MATCHi", url: "http://www.matchi.se/" ]
 
     // Any additional developers beyond the author specified above.
-//    def developers = [ [ name: "Joe Bloggs", email: "joe@bloggs.net" ]]
+    def developers = [ [ name: "Carljohan Carlsson", email: "carljohan.carlsson@gmail.com" ]]
 
     // Location of the plugin's issue tracker.
-//    def issueManagement = [ system: "JIRA", url: "http://jira.grails.org/browse/GPMYPLUGIN" ]
+    def issueManagement = [system: 'github', url: 'https://github.com/carkar/fortnox-grails-plugin/issues']
 
     // Online location of the plugin's browseable source code.
-//    def scm = [ url: "http://svn.codehaus.org/grails-plugins/" ]
+    def scm = [ url: "https://github.com/carkar/fortnox-grails-plugin" ]
 
     def doWithWebDescriptor = { xml ->
         // TODO Implement additions to web.xml (optional), this event occurs before

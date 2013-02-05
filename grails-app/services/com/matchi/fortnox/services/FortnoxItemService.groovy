@@ -2,7 +2,7 @@ package com.matchi.fortnox.services
 
 import com.matchi.fortnox.domain.Items
 
-class ItemService {
+class FortnoxItemService {
 
     public static final String GET_ITEM = "get_item.php"
     public static final String SET_ITEM = "set_item.php"
