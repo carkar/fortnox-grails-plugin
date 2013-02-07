@@ -66,7 +66,10 @@ class FortnoxService {
 
     private void validateResponse(def object, result, httpUrl) {
         def bodyParams
+        log.info("Incoming " + result)
+        log.info("Object " + object)
         if (object instanceof FortnoxError) {
+            log.error(result)
             ((FortnoxError) object).reponseXml = result
             ((FortnoxError) object).requestBody = bodyParams
             ((FortnoxError) object).requestUrl = httpUrl

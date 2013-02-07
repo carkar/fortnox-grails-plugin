@@ -13,18 +13,21 @@ class FortnoxInvoiceService {
     def xmlHelper
 
     def set(Invoice invoice, def auth) {
+        def result
         def xml = xmlHelper.toXML(invoice)
-        log.info(xml)
-        fortnoxService.doPost(SET_INVOICE, auth, [xml:xml]) { }
+
+        fortnoxService.doPost(SET_INVOICE, auth, [xml:xml]) { res ->
+            result = res
+        }
+        result
     }
 
     def list(def auth, def filter = "") {
-
         def result = []
         fortnoxService.doGet(GET_INVOICES, auth, [filter:filter]) { invoices ->
             result = invoices.invoices
         }
-        return result
+        result
     }
 
     def get(def auth, def id) {

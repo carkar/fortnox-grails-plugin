@@ -30,6 +30,9 @@ class Invoice {
     String color
     String status
     String comment
+    String invoice_last_output
+
+    String modified
 
     @XStreamAlias("invoicerows")
     List<InvoiceRow> invoicerows = new ArrayList<InvoiceRow>()
