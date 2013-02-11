@@ -20,7 +20,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias
 
  */
 @XStreamAlias("error")
-class FortnoxError {
+class FortnoxError implements Serializable {
     String code
     String message
     String reponseXml

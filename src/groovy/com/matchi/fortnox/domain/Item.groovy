@@ -5,7 +5,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias
 import com.thoughtworks.xstream.annotations.XStreamConverter
 
 @XStreamAlias("item")
-class Item {
+class Item implements Serializable {
     String id
     String descr
     String type
@@ -13,4 +13,8 @@ class Item {
 
     @XStreamConverter(PriceConverter.class)
     Price price
+
+    String getFirstPrice() {
+        return (price.lists.values().size() > 0 ? price.lists.values().iterator().next() : "0")
+    }
 }

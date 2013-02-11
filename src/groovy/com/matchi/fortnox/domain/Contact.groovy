@@ -3,7 +3,7 @@ package com.matchi.fortnox.domain
 import com.thoughtworks.xstream.annotations.XStreamAlias
 
 @XStreamAlias("contact")
-class Contact {
+class Contact implements Serializable {
 
     /** identifier */
     String id

@@ -1,5 +1,5 @@
 package com.matchi.fortnox.domain
 
-class Price {
+class Price implements Serializable {
     def lists = [:]
 }

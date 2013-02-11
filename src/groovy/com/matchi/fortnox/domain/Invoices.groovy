@@ -4,7 +4,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias
 import com.thoughtworks.xstream.annotations.XStreamImplicit
 
 @XStreamAlias("invoices")
-class Invoices {
+class Invoices implements Serializable {
     @XStreamImplicit(itemFieldName="invoice")
     List<Invoice> invoices
 }

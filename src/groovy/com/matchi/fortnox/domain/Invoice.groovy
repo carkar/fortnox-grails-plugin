@@ -5,7 +5,7 @@ import com.thoughtworks.xstream.XStream
 import com.thoughtworks.xstream.annotations.XStreamAlias
 
 @XStreamAlias("invoice")
-class Invoice {
+class Invoice implements Serializable {
 
     String id
     String type

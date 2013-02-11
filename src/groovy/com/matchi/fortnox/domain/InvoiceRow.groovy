@@ -3,7 +3,7 @@ package com.matchi.fortnox.domain
 import com.thoughtworks.xstream.annotations.XStreamAlias
 
 @XStreamAlias("invoicerow")
-class InvoiceRow {
+class InvoiceRow implements Serializable {
     String id
     String descr
     String prodno
