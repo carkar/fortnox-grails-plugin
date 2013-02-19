@@ -23,13 +23,13 @@ class FortnoxContactService {
 
         def xml = new String(xmlHelper.toXML(contact).getBytes("UTF-8"), "UTF-8")
 
-        def id = null
+        def result = null
 
-        fortnoxService.doPost(SET_CONTACT, auth, [xml:xml]) { def result ->
-            log.info("Created customer with id ${result.id}")
-            id = result.id
+        fortnoxService.doPost(SET_CONTACT, auth, [xml:xml]) { def response ->
+            log.info("Created customer with id ${response.id}")
+            result = response
         }
-        return id
+        return result
     }
 
     def list(def auth) {
