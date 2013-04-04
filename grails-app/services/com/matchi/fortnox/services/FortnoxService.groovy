@@ -49,7 +49,8 @@ class FortnoxService {
             requestContentType = 'application/x-www-form-urlencoded; charset=utf-8'
 
             response.failure = { resp ->
-                throw new IllegalStateException("FortnoxError from fortnox")
+                log.error(resp)
+                throw new FortnoxException("FortnoxError from fortnox")
             }
 
             response.success = { resp, xmlData ->
