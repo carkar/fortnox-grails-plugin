@@ -16,7 +16,7 @@ class FortnoxInvoiceService {
         def result
         def xml = xmlHelper.toXML(invoice)
 
-        fortnoxService.doPost(SET_INVOICE +".php", auth, [xml:xml]) { res ->
+        fortnoxService.doPost(SET_INVOICE, auth, [xml:xml]) { res ->
             result = res
         }
         result
