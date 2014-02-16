@@ -11,6 +11,7 @@ import com.matchi.fortnox.domain.Items
 import com.matchi.fortnox.domain.Result
 import com.thoughtworks.xstream.XStream
 import com.thoughtworks.xstream.io.xml.DomDriver
+import com.thoughtworks.xstream.io.xml.XmlFriendlyNameCoder
 import com.thoughtworks.xstream.mapper.MapperWrapper
 
 /**
@@ -25,7 +26,9 @@ class XmlHelper {
     XStream xstream
 
     XmlHelper() {
-        xstream = new XStream(new DomDriver()) {
+        // fortnox uses underscore is some attributes and xstream adds a double underscore
+        // this is a fix for that
+        xstream = new XStream(new DomDriver("UTF-8", new XmlFriendlyNameCoder("_-", "_"))) {
             /*
                 Do not REQUIRE all field to be present in target object
              */

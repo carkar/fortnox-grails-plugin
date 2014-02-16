@@ -51,6 +51,15 @@ class Contact implements Serializable {
     String delphone2
     String delfax
 
+    /** Email */
+    @XStreamAlias("email_offer")
+    String email_offer
+
+    @XStreamAlias("email_order")
+    String email_order
+
+    @XStreamAlias("email_invoice")
+    String email_invoice
 
     String yourref
     String ourref

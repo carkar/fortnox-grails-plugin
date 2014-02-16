@@ -25,6 +25,8 @@ class FortnoxContactService {
 
         def result = null
 
+        log.info(xml)
+
         fortnoxService.doPost(SET_CONTACT, auth, [xml:xml]) { def response ->
             log.info("Created customer with id ${response.id}")
             result = response
